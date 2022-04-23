@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blanco: #fffbf0;
+    --beige: #fff8de;
+    --yellow: #ffe381;
+    --blue: #addfcf;
+    --orange: #ffc911;
+    --family: 'Open Sans', sans-serif;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--blanco);
+}
+
+/**-------HEADER/NAV------*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    padding: 5px;
+    width: 80px;
+    height: 80px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 10px 30px 0 30px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+}
+
+header nav ul li a:hover {
+    text-decoration: overline var(--orange);
+}
+
+/**------MAIN-----*/
+
+.hero {
+    width: 100%;
+    height: calc(100vh - 80px);
+    display: flex;
+    justify-content: space-around;
+}
+
+.hero img {
+    width: 500px;
+    height: calc(100vh - 85px);
+}
+
+.hero div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero div h1 {
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.hero div a {
+    width: 150px;
+    color: #000;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--yellow);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.hero div a:hover {
+    background-color: #ffd84e;
+}
+
+.img-absolute {
+    position: absolute;
+    top: 90%;
+    right: 20%;
+
+}
+
+.we {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    background-color: var(--beige);
+}
+
+.we div {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.5fr;
+    grid-template-rows: 0.5fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "custom interface performance";
+}
+
+.we div div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    padding: 50px;
+}
+
+.we div div img {
+    width: 100px;
+    height: 100px;
+}
+
+.we div div p {
+    padding-top: 20px;
+}
+
+.we div:nth-child(1) {
+    background-color: var(--blue);
+    grid-area: custom;
+}
+
+.we div:nth-child(2) {
+    background-color: var(--yellow);
+    grid-area: interface;
+    text-align: center;
+}
+
+.we div:nth-child(3) {
+    background-color: var(--orange);
+    grid-area: performance;
+}
+
+.contact {
+    width: 100%;
+    padding-top: 50px;
+    background-color: var(--beige);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 15px;
+    grid-template-areas:
+        "text form";
+}
+
+
+.contact>div {
+    grid-area: text;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact>div p {
+    width: 50%;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/**-------FORM-------*/
+
+form {
+    width: 100%;
+    padding: 30px;
+    grid-area: form;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin: 50px auto; */
+}
+
+.feedback-input {
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 5px;
+    line-height: 22px;
+    background-color: transparent;
+    border: 2px solid var(--orange);
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+.feedback-input:focus {
+    border: 2px solid #CC4949;
+}
+
+textarea {
+    height: 150px;
+    line-height: 150%;
+    resize: vertical;
+}
+
+[type="submit"] {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    width: 100%;
+    background: var(--yellow);
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: all 0.3s;
+    margin-top: -4px;
+    font-weight: 700;
+}
+
+[type="submit"]:hover {
+    background: #CC4949;
+}
+
+/**-------FOOTER--------*/
+footer {
+    width: 100%;
+    height: 200px;
+    background-color: var(--beige);
+    background-image: url("../img/layered-steps-haikei.png");
+    background-position: center;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
