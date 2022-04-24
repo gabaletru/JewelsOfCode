@@ -342,6 +342,8 @@ footer {
             "performance";
     }
 
+
+
     .contact {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
@@ -351,6 +353,7 @@ footer {
     }
 
     .img-absolute {
+        grid-area: img;
         width: 100%;
     }
 }
@@ -359,6 +362,9 @@ footer {
     .hero div h1{
         text-align: center;
         font-size: 50px;
+    }
+    .hero div h2{
+        text-align: center;
     }
     .we div {
         grid-template-rows: 140px 230px 200px 230px;
@@ -380,5 +386,14 @@ footer {
     .img-absolute {
         width: 100%;
         top:82%;
+    }
+}
+
+@media screen and (max-width:359px){
+    .hero div h1{
+        font-size: 40px;
+    }
+    .hero div h2{
+        font-size: 20px;
     }
 }
