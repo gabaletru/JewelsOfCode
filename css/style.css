@@ -97,8 +97,14 @@ header nav ul li a:hover {
 
 .img-absolute {
     position: absolute;
+    width: 60%; 
+    height: 60%;
     top: 90%;
-    right: 20%;
+    right: 0;
+    left: 0;
+    margin: auto;
+    /* min-width: 440px;
+    min-height: 250px; */
 
 }
 
@@ -173,6 +179,7 @@ header nav ul li a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .contact>div p {
@@ -252,4 +259,126 @@ footer {
     display: flex;
     justify-content: center;
     align-items: flex-end;
+}
+
+
+/**----MEDIA QUERIE-----*/
+
+@media screen and (max-width:1040px){
+    .hero img {
+        display:none;
+    }
+    .hero div {
+        width: 100%;
+        align-items: center;
+        background-image: url("../img/jewelry.png");
+        background-repeat: no-repeat;
+    }
+    .img-absolute {
+        top: 90%;
+    }
+}
+
+@media screen and (max-width:894px){
+    .hero{
+        height: 100vh;
+    }
+    .we {
+        margin-top: 180px;
+    }
+    .we div {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "custom interface"
+            "performance performance";
+    }
+    .we div div{
+        height: auto;
+    }
+    .img-absolute {
+        top: 95%;
+    }
+}
+
+@media screen and (max-width:756px){
+    .we {
+        margin-top: 180px;
+    }
+    .img-absolute {
+        top: 85%;
+        width: 100%;
+    }
+    .hero div{
+        margin-bottom: 100px;
+    }
+}
+
+@media screen and (max-width:635px){
+    .img-absolute {
+        top: 85%;
+    }
+}
+
+@media screen and (max-width:658px){
+    .we {
+        margin-top: 180px;
+    }
+    .hero div{
+        height: 100vh;
+    }
+    
+    .we div div {
+        padding: 20px;
+    }
+
+    .we div {
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px 200px 200px 200px;
+        grid-template-areas:
+            "img"
+            "custom"
+            "interface"
+            "performance";
+    }
+
+    .contact {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "text" 
+            "form";
+    }
+
+    .img-absolute {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:480px){
+    .hero div h1{
+        text-align: center;
+        font-size: 50px;
+    }
+    .we div {
+        grid-template-rows: 140px 230px 200px 230px;
+    }
+    .we div div {
+        padding:5px;
+    }
+    .we div div img {
+        width: 80px;
+        height: 80px;
+    }
+    .img-absolute {
+        width: 100%;
+        top:82%;
+    }
+}
+
+@media screen and (max-width: 445px){
+    .img-absolute {
+        width: 100%;
+        top:82%;
+    }
 }
