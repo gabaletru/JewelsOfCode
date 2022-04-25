@@ -283,6 +283,7 @@ footer {
         background-image: url("../img/jewelry.png");
         background-repeat: no-repeat;
         background-size: contain;
+        background-attachment: fixed;
     }
     .we div div p{
         padding: 30px;
