@@ -284,6 +284,7 @@ footer {
         background-repeat: no-repeat;
         background-size: contain;
         background-attachment: fixed;
+        background-position:bottom;
     }
     .we div div p{
         padding: 30px;
