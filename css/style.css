@@ -356,11 +356,15 @@ footer {
     }
 }
 
-@media screen and (max-width:359px){
+@media screen and (max-width:395px){
     .hero div h1{
         font-size: 40px;
     }
     .hero div h2{
         font-size: 20px;
+    }
+
+    header nav ul li {
+        margin: 10px 10px 0 10px;
     }
 }
